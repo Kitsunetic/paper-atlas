@@ -1,0 +1,150 @@
+primary_category_id,primary_category_ko,normalized_institution,author_count,selected_paper_count,matched_filter_views,dual_affiliation_author_count,raw_affiliation_variants
+FOREIGN_INSTITUTION,외국 기관,Amazon,6,2,foreign,0,Amazon
+FOREIGN_INSTITUTION,외국 기관,NVIDIA,5,4,foreign,0,NVIDIA
+FOREIGN_INSTITUTION,외국 기관,Adobe Research,4,4,foreign,0,Adobe Research
+FOREIGN_INSTITUTION,외국 기관,Carnegie Mellon University,4,2,foreign,0,Carnegie Mellon University
+FOREIGN_INSTITUTION,외국 기관,Microsoft Research Asia,4,2,foreign,0,Microsoft Research Asia
+FOREIGN_INSTITUTION,외국 기관,Snap Inc.,4,2,foreign,0,Snap Inc.
+FOREIGN_INSTITUTION,외국 기관,National Taiwan University,3,2,foreign,0,National Taiwan University
+FOREIGN_INSTITUTION,외국 기관,University of Science and Technology of China,3,3,foreign,0,University of Science and Technology of China
+FOREIGN_INSTITUTION,외국 기관,Vanderbilt University,3,1,foreign,0,Vanderbilt University
+FOREIGN_INSTITUTION,외국 기관,Adobe Systems,2,1,foreign,0,Adobe Systems
+FOREIGN_INSTITUTION,외국 기관,Huawei Noah’s Ark Lab,2,2,foreign,0,Huawei Noah’s Ark Lab
+FOREIGN_INSTITUTION,외국 기관,Meta,2,2,foreign,0,Meta
+FOREIGN_INSTITUTION,외국 기관,New York University,2,2,foreign,0,New York University
+FOREIGN_INSTITUTION,외국 기관,Sony Group Corporation,2,1,foreign,0,Sony Group Corporation
+FOREIGN_INSTITUTION,외국 기관,"University of California, Los Angeles",2,1,foreign,0,"University of California, Los Angeles"
+FOREIGN_INSTITUTION,외국 기관,University of Oxford,2,2,foreign,0,University of Oxford
+FOREIGN_INSTITUTION,외국 기관,Aalborg University,1,1,foreign,0,Aalborg University
+FOREIGN_INSTITUTION,외국 기관,Adobe,1,1,foreign,0,Adobe
+FOREIGN_INSTITUTION,외국 기관,AiV Co.,1,1,foreign,0,AiV Co.
+FOREIGN_INSTITUTION,외국 기관,Amazon AGI,1,1,foreign,0,Amazon AGI
+FOREIGN_INSTITUTION,외국 기관,Baidu;  Indiana University Bloomington; Shanghai Jiao Tong University; Horizon Robotics,1,1,foreign,0,Baidu;  Indiana University Bloomington; Shanghai Jiao Tong University; Horizon Robotics
+FOREIGN_INSTITUTION,외국 기관,Blynx,1,1,foreign,0,Blynx
+FOREIGN_INSTITUTION,외국 기관,"Boston University, Boston University",1,1,foreign,0,"Boston University, Boston University"
+FOREIGN_INSTITUTION,외국 기관,ByteDance Inc.,1,1,foreign,0,ByteDance Inc.
+FOREIGN_INSTITUTION,외국 기관,Canva,1,1,foreign,0,Canva
+FOREIGN_INSTITUTION,외국 기관,"CMU, Carnegie Mellon University",1,1,foreign,0,"CMU, Carnegie Mellon University"
+FOREIGN_INSTITUTION,외국 기관,"CMU, Carnegie Mellon University; National Yang Ming Chiao Tung University; Sony Group Corporation",1,1,foreign,0,"CMU, Carnegie Mellon University; National Yang Ming Chiao Tung University; Sony Group Corporation"
+FOREIGN_INSTITUTION,외국 기관,Czech Technical Univeresity in Prague,1,1,foreign,0,Czech Technical Univeresity in Prague
+FOREIGN_INSTITUTION,외국 기관,Deep dimension,1,1,foreign,0,Deep dimension
+FOREIGN_INSTITUTION,외국 기관,"Department of Computer Science, ETHZ - ETH Zurich",1,1,foreign,0,"Department of Computer Science, ETHZ - ETH Zurich"
+FOREIGN_INSTITUTION,외국 기관,Emory University; Stanford University,1,1,foreign,0,Emory University; Stanford University
+FOREIGN_INSTITUTION,외국 기관,ETH Zurich / Microsoft,1,1,foreign,0,ETH Zurich / Microsoft
+FOREIGN_INSTITUTION,외국 기관,ETHZ - ETH Zurich,1,2,foreign,0,ETHZ - ETH Zurich
+FOREIGN_INSTITUTION,외국 기관,EverEx,1,2,foreign,0,EverEx
+FOREIGN_INSTITUTION,외국 기관,Facebook,1,1,foreign,0,Facebook
+FOREIGN_INSTITUTION,외국 기관,FruitfulAI; University of Padua,1,1,foreign,0,FruitfulAI; University of Padua
+FOREIGN_INSTITUTION,외국 기관,GenGenAI,1,1,foreign,0,GenGenAI
+FOREIGN_INSTITUTION,외국 기관,Google,1,1,foreign,0,Google
+FOREIGN_INSTITUTION,외국 기관,Helmholtz Munich,1,1,foreign,0,Helmholtz Munich
+FOREIGN_INSTITUTION,외국 기관,Horizon Robotics,1,1,foreign,0,Horizon Robotics
+FOREIGN_INSTITUTION,외국 기관,Huawei,1,1,foreign,0,Huawei
+FOREIGN_INSTITUTION,외국 기관,Individual,1,1,foreign,0,Individual
+FOREIGN_INSTITUTION,외국 기관,Intel,1,1,foreign,0,Intel
+FOREIGN_INSTITUTION,외국 기관,Intel Labs,1,2,foreign,0,Intel Labs
+FOREIGN_INSTITUTION,외국 기관,KFUPM,1,1,foreign,0,KFUPM
+FOREIGN_INSTITUTION,외국 기관,La Trobe University,1,1,foreign,0,La Trobe University
+FOREIGN_INSTITUTION,외국 기관,"Massachusetts General Hospital and Harvard Medical School, Boston, MA, USA",1,2,foreign,0,"Massachusetts General Hospital and Harvard Medical School, Boston, MA, USA"
+FOREIGN_INSTITUTION,외국 기관,Meta Reality Lab,1,1,foreign,0,Meta Reality Lab
+FOREIGN_INSTITUTION,외국 기관,Microsoft Research,1,1,foreign,0,Microsoft Research
+FOREIGN_INSTITUTION,외국 기관,NAIRL,1,1,foreign,0,NAIRL
+FOREIGN_INSTITUTION,외국 기관,"Nanyang Technological University, Singapore",1,1,foreign,0,"Nanyang Technological University, Singapore"
+FOREIGN_INSTITUTION,외국 기관,National University of Singapore,1,1,foreign,0,National University of Singapore
+FOREIGN_INSTITUTION,외국 기관,"Ohio State University, Columbus",1,1,foreign,0,"Ohio State University, Columbus"
+FOREIGN_INSTITUTION,외국 기관,Prometheus,1,1,foreign,0,Prometheus
+FOREIGN_INSTITUTION,외국 기관,"Qualcomm Inc, QualComm",1,1,foreign,0,"Qualcomm Inc, QualComm"
+FOREIGN_INSTITUTION,외국 기관,Rivian,1,1,foreign,0,Rivian
+FOREIGN_INSTITUTION,외국 기관,Sail Lab; Sony ; Waseda University,1,1,foreign,0,Sail Lab; Sony ; Waseda University
+FOREIGN_INSTITUTION,외국 기관,sakak,1,1,foreign,0,sakak
+FOREIGN_INSTITUTION,외국 기관,ShanghaiTech University,1,1,foreign,0,ShanghaiTech University
+FOREIGN_INSTITUTION,외국 기관,"Snap Inc., Northeastern University",1,1,foreign,0,"Snap Inc., Northeastern University"
+FOREIGN_INSTITUTION,외국 기관,South Korea,1,1,foreign,0,South Korea
+FOREIGN_INSTITUTION,외국 기관,Technical University of Munich,1,1,foreign,0,Technical University of Munich
+FOREIGN_INSTITUTION,외국 기관,Technische Universität Darmstadt,1,1,foreign,0,Technische Universität Darmstadt
+FOREIGN_INSTITUTION,외국 기관,The University of Texas at Austin,1,1,foreign,0,The University of Texas at Austin
+FOREIGN_INSTITUTION,외국 기관,The University of Tokyo,1,1,foreign,0,The University of Tokyo
+FOREIGN_INSTITUTION,외국 기관,Tsinghua University,1,1,foreign,0,Tsinghua University
+FOREIGN_INSTITUTION,외국 기관,TU Munich/Zeiss Meditec,1,1,foreign,0,TU Munich/Zeiss Meditec
+FOREIGN_INSTITUTION,외국 기관,Twelve Labs,1,1,foreign,0,Twelve Labs
+FOREIGN_INSTITUTION,외국 기관,Tynapse,1,1,foreign,0,Tynapse
+FOREIGN_INSTITUTION,외국 기관,Universita' degli studi di Padova,1,1,foreign,0,Universita' degli studi di Padova
+FOREIGN_INSTITUTION,외국 기관,University of Aberdeen/ Fogsphere (Redev.AI Ltd.),1,1,foreign,0,University of Aberdeen/ Fogsphere (Redev.AI Ltd.)
+FOREIGN_INSTITUTION,외국 기관,University of Birmingham,1,1,foreign,0,University of Birmingham
+FOREIGN_INSTITUTION,외국 기관,University of British Columbia,1,1,foreign,0,University of British Columbia
+FOREIGN_INSTITUTION,외국 기관,University of California at Merced,1,2,foreign,0,University of California at Merced
+FOREIGN_INSTITUTION,외국 기관,"University of California, Berkeley",1,1,foreign,0,"University of California, Berkeley"
+FOREIGN_INSTITUTION,외국 기관,"University of California, San Diego",1,1,foreign,0,"University of California, San Diego"
+FOREIGN_INSTITUTION,외국 기관,"University of California, San Diego, University of California, San Diego",1,1,foreign,0,"University of California, San Diego, University of California, San Diego"
+FOREIGN_INSTITUTION,외국 기관,University of Illinois at Urbana-Champaign,1,1,foreign,0,University of Illinois at Urbana-Champaign
+FOREIGN_INSTITUTION,외국 기관,"University of Illinois, Urbana Champaign",1,1,foreign,0,"University of Illinois, Urbana Champaign"
+FOREIGN_INSTITUTION,외국 기관,University of Michigan,1,1,foreign,0,University of Michigan
+FOREIGN_INSTITUTION,외국 기관,University of Michigan - Ann Arbor,1,1,foreign,0,University of Michigan - Ann Arbor
+FOREIGN_INSTITUTION,외국 기관,University of Pennsylvania,1,1,foreign,0,University of Pennsylvania
+FOREIGN_INSTITUTION,외국 기관,Zhejiang University,1,1,foreign,0,Zhejiang University
+KOREAN_COMPANY,한국 기업,LG Electronics,13,6,company,0,LG Electronics | LG Electronins
+KOREAN_COMPANY,한국 기업,NAVER LABS,9,3,company,0,Naver Labs | NAVER LABS | NaverLabs
+KOREAN_COMPANY,한국 기업,Samsung,8,6,company,0,"Samsung | Samsung Electronics | Samsung Electronics Co., Ltd. | Samsung Research | Samsung Research America"
+KOREAN_COMPANY,한국 기업,LG Corporation,6,4,company,0,LG Corporation
+KOREAN_COMPANY,한국 기업,NAVER AI Lab,6,3,company,0,NAVER  AI Lab | Naver AI Lab | NAVER AI Lab
+KOREAN_COMPANY,한국 기업,NAVER Cloud,6,4,company,0,Naver Cloud | NAVER Cloud | NAVER Cloud Corp.
+KOREAN_COMPANY,한국 기업,Kakao,5,1,company,0,Kakao | Kakao Corp.
+KOREAN_COMPANY,한국 기업,LG AI Research,5,3,company,0,"Language Lab, LG AI Research | LG AI Research | University of Michigan - Ann Arbor; LG AI Research | University of Michigan, LG AI Research"
+KOREAN_COMPANY,한국 기업,AiM Future,4,2,company,0,"AiM Future | AiM Future, Inc. | Aimfuture"
+KOREAN_COMPANY,한국 기업,CLO Virtual Fashion,4,2,company,0,CLO Virtual Fashion | CLO Virtual Fashion Inc.
+KOREAN_COMPANY,한국 기업,SNOW Corporation,3,1,company,0,SNOW Corp. | SNOW Corporation
+KOREAN_COMPANY,한국 기업,CJ Corp.,2,2,company,0,CJ Corp.
+KOREAN_COMPANY,한국 기업,KRAFTON,2,1,company,0,Krafton | KRAFTON
+KOREAN_COMPANY,한국 기업,NAVER,2,1,company,0,NAVER
+KOREAN_COMPANY,한국 기업,POSCO DX,2,1,company,0,POSCO DX
+KOREAN_COMPANY,한국 기업,SK Telecom,2,1,company,0,SK Telecom
+KOREAN_COMPANY,한국 기업,Hyundai Motor Company,1,1,company,0,"Robotics Lab, Hyundai Motor Company"
+KOREAN_COMPANY,한국 기업,Maum AI,1,1,company,0,Maum AI
+KOREAN_COMPANY,한국 기업,OGQ,1,2,company,0,OGQ
+KOREAN_COMPANY,한국 기업,SK hynix,1,1,company,0,SK hynix
+KOREAN_COMPANY,한국 기업,StradVision,1,1,company,0,StradVision
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,KAIST,184,78,university|company,2,"Gachon University; Korea Advanced Institute of Science & Technology | Kaist | KAIST | KAIST (Korea Advanced Institute of Science and Technology) | KAIST AI | KAIST Innocore LLM, Korea Advanced Institute of Science & Technology | KAIST, Imperial College London | Kim Jaechul Graduate School of AI, Korea Advanced Institute of Science & Technology | Korea Advanced Institute of Science & Technology | Korea Advanced Institute of Science & Technology (KAIST), Daejeon | Korea Advanced Institute of Science & Technology; | Korea Advanced Institute of Science & Technology; ANTLAB | Korea Advanced Institute of Science & Technology; Daegu Gyeongbuk Institute of Science and Technology | Korea Advanced Institute of Science & Technology; Korea Advanced Institute of Science & Technology | Korea Advanced Institute of Science & Technology; Korea Advanced Institute of Science & Technology; Korea University | Korea Advanced Institute of Science & Technology; Korea University | Korea Advanced Institute of Science & Technology; New York University Abu Dhabi | Korea Advanced Institute of Science & Technology; Pohang University of Science and Technology | Korea Advanced Institute of Science and Technology | Korea Advanced Institute of Science and Technology (KAIST) | Korea Advanced Institute of Science and Technology (KAIST), INEEJI Corp. | Korea Advanced Institute of Science and Technology; AITRICS | KRAFTON; Korea Advanced Institute of Science & Technology | Max Planck Institute for Security and Privacy; Korea Advanced Institute of Science & Technology | School of Computing, KAIST"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Seoul National University,130,52,university|company,2,"Department of Computer Science and Engineering, Seoul National University | Google Research & Seoul National University | Google; Seoul National University | Interdisciplinary Program in Neuroscience, Seoul National University | IPAI, Seoul National University, Seoul, Korea and Department of ECE, INMC, Seoul National University, Seoul, Korea | Seoul National University | SEOUL NATIONAL UNIVERSITY | Seoul National University College of Medicine; Seoul National University College of Medicine | Seoul National University, Seoul National University; Yonsei University | Seoul National University; Korea University | Seoul National University; LG Corporation | Seoul National University; Samsung | Seoul National University; Seoul National University | SNU, Seoul National University | SNU/CVLAB | Vision and Learning Lab, Seoul National University"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Yonsei University,71,31,university|company,1,Emory University; Yonsei University | NAVER; Yonsei University | Yonsei Univ. | yonsei univercity | yonsei university | Yonsei university | Yonsei University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Korea University,56,28,university|company,1,"Korea University | Korea University Sejong Campus | Korea University, LG Uplus Corp. | Korea University; Korea University | MINTLAB, Department of Mechanical Engineering, KOREA University"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,POSTECH,54,24,university,0,Pohang University of Science and Technology | Pohang University of Science and Technology (POSTECH) | Pohang University of Science and Technology; Pohang University of Science and Technology | POSTECH | Seoul National University; Pohang University of Science and Technology
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Sungkyunkwan University,51,18,university,0,"College of Information and Communication Engineering, Sungkyunkwan University, South Korea | Department of Computer Science and Engineering, Sungkyunkwan University, Suwon 16419, Korea | Georgia Institute of Technology; Sung Kyun Kwan University | Sung Kyun Kwan University | Sung Kyun Kwan University; Sung Kyun Kwan University | Sungkyunkwan University | SungKyunKwan University | Sungkyunkwan University (SKKU)"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Chung-Ang University,29,18,university,0,Chung-ang University | Chung-Ang University | Chung-Ang University (CAU) | Chung-Ang University Seoul | Chung-Ang University; Soongsil University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Kyung Hee University,23,8,university,0,Kyung Hee University | Kyung Hee University; Kyung Hee University | KyungHee University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,UNIST,23,9,university,0,"Ulsan National Institute of Science and Technology | Ulsan National Institute of Science and Technology (UNIST) | Ulsan National Institute of Science and Technology; Hanyang Universty | UNIST | UNIST, Korea"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Hanyang University,20,7,university,0,Hanyang University | Hanyang Universty
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,GIST,16,11,university|company,1,"AI Graduate School, Gwangju Institute of Science and Technology(GIST) | CJ AI center; Gwangju Institute of Science and Technology | GIST | Gwangju Institute of Science and Technology | Gwangju Institute of Science and Technology (GIST) | Yonsei University; Gwangju Institute of Science and Technology"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Ewha Womans University,14,7,university,0,Ewha W. University | Ewha womans university | Ewha Womans University | Ewha Women's University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Kyungpook National University,10,4,university,0,KNU | Kyungpook National University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Pusan National University,10,6,university,0,Pusan National University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,SeoulTech,9,5,university,0,Seoul National University of Science & Technology | Seoul National University of Science and Technology | SEOUL NATIONAL UNIVERSITY OF SCIENCE AND TECHNOLOGY | SeoulTech
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Soongsil University,9,4,university,0,Soongsil Univ. | Soongsil university | Soongsil University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,University of Seoul,9,4,university,0,"Computer Vision Lab, University of Seoul | Seoul City University | Seoul City University; University of Seoul | University of Seoul"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Jeonbuk National University,8,3,university,0,Jeonbuk National University | Jeounbuk National University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Sogang University,8,2,university,0,Sogang university | Sogang University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Chungnam National University,7,4,university,0,Chungnam National University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,DGIST,7,6,university,0,Daegu Gyeongbuk Institute of Science and Technology | DGIST
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Kookmin University,6,3,university,0,Kookmin University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Inha University,5,2,university,0,Inha University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Korea Aerospace University,5,2,university,0,Korea Aerospace University | Korea Aerospace University; Korea Aerospace University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Sejong University,5,2,university,0,"Robotics and Computer Vision Lab, Sejong University | Sejong University"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Handong Global University,4,2,university,0,Handong Global University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,University of Ulsan,4,1,university,0,"Asan Medical Center, University of Ulsan | Ulsan University | Ulsan University; Ulsan University"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Kangwon National University,3,2,university,0,Kangwon National University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Konkuk University,3,2,university,0,Konkuk University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Pukyong National University,3,2,university,0,Pukyong National University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Sookmyung Women's University,3,1,university,0,Sookmyung Women's University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,University of Ulsan College of Medicine,3,1,university,0,"Asan Medical Center, Seoul, South Korea; University of Ulsan College of Medicine, Ulsan University | University of Ulsan College of Medicine | University of Ulsan College of Medicine, Asan Medical Center"
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Ajou University,2,2,university,0,Ajou University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Asan Medical Center,2,1,university,0,Asan Medical Center; Chosun University | Asan Medical Center; Korea National Open University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Catholic University of Korea,2,1,university,0,Catholic University of Korea | The Catholic University of Korea
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Korea Cyber University,2,1,university,0,Korea Cyber University | Korea Cyber University; SAKAK Inc.
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Seoul National University Hospital,2,2,university,0,Seoul National University Hospital | Seoul National University Hospital; Seoul National University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Changwon National University,1,1,university,0,Changwon National University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Dankook University,1,1,university,0,Dankook University
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Korea Institute of Energy Technology,1,1,university,0,Korea Institute of Energy Technology
+KOREAN_UNIVERSITY_GRAD_SCIENCE_INSTITUTE,한국 대학·대학원·과학기술원,Kwangwoon University,1,1,university,0,Kwangwoon University
+KOREAN_RESEARCH_INSTITUTE,한국 연구기관,ETRI,10,6,university|research,1,Electronics and Telecommunication Research Institute | Electronics and Telecommunications Research Institute | Electronics and Telecommunications Research Institute; Sung Kyun Kwan University | ETRI
+KOREAN_RESEARCH_INSTITUTE,한국 연구기관,KETI,9,8,university|research,1,Korea Electronics Technology Institute | Korea Electronics Technology Institute (KETI) | Korea Electronics Technology Institute; Chung-Ang University
+KOREAN_RESEARCH_INSTITUTE,한국 연구기관,KIST,7,3,research,0,KIST | Korea Institute of Science and Technology | Korea Institute of Science and Technology (KIST)
+KOREAN_RESEARCH_INSTITUTE,한국 연구기관,KITECH,1,1,research,0,Korea Institute of Industrial Technology

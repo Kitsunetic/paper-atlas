@@ -1,0 +1,5 @@
+run_id,check,prior_value,rerun_value,difference,status,details
+eccv2026-reaudit-2026-09-10,official_poster_uid_coverage,not_recorded,2834,,pass,"Fresh ECVA download contains 2,834 unique Poster paper UIDs."
+eccv2026-reaudit-2026-09-10,included_paper_count,277,277,0,unchanged,Independent exact-institution-map rerun against a fresh ECVA programme download.
+eccv2026-reaudit-2026-09-10,added_virtual_poster_ids,,,0,unchanged,Fresh rerun IDs absent from the prior complete list.
+eccv2026-reaudit-2026-09-10,removed_virtual_poster_ids,,,0,unchanged,Prior-list IDs absent from the fresh rerun.
