@@ -56,21 +56,27 @@ bounded internal scroll region, leaving the graph viewport as the main canvas.
 
 - **Structure:** a native search input with an attached, bounded author-result list. Each result shows the author name and canonical normalized institution.
 - **States:** empty, matching (up to 10 ordered candidates), no matches, active keyboard candidate, and selected author.
-- **Accessibility:** the input follows the combobox/listbox pattern with visible click targets; Arrow keys move the active candidate, Enter selects it, and Escape closes the list. Selecting a candidate invokes the same toggle as clicking that author's node: it depth-first traverses the undirected coauthor graph, focuses every reachable author and internal collaboration link, adds a node-colour glow to the author, hides the tooltip, and leaves institution-legend selection independent; selecting the same candidate again clears the focus.
+- **Accessibility:** the input follows the combobox/listbox pattern with visible click targets; Arrow keys move the active candidate, Enter selects it, and Escape closes the list. Selecting a candidate invokes the same toggle as clicking that author's node: it breadth-first traverses the undirected coauthor graph, focuses every reachable author and internal collaboration link, adds a node-colour glow to the author, hides the tooltip, and leaves institution-legend selection independent; selecting the same candidate again clears the focus.
 
 ### Graph node
 
-- **States:** neutral, hover detail, institution-focused through the legend, graph-component-focused through a node click, and dimmed by another focus. Clicking a node depth-first traverses each reachable coauthor without revisiting authors, focusing its full connected component. The principal selected author receives a static, node-colour SVG glow and a persistent `Selected · name` graph label without an added contrasting ring; its reachable collaborators retain only the lighter secondary ring. Graph focus and hover detail are independent: while a node or component is selected, hovering any node still opens, positions, and dismisses its tooltip without changing the selected emphasis.
+- **States:** neutral, hover detail, institution-focused through the legend, graph-component-focused through a node click, and dimmed by another focus. Clicking a node breadth-first traverses each reachable coauthor without revisiting authors, focusing its full connected component. The principal selected author receives a static, node-colour SVG glow and a persistent `Selected · name` graph label without an added contrasting ring; its reachable collaborators retain only the lighter secondary ring. Graph focus and hover detail are independent: while a node or component is selected, hovering any node still opens, positions, and dismisses its tooltip without changing the selected emphasis.
 - **Accessibility:** SVG remains labelled; tooltip presents the canonical normalized institution name. A thin divider separates author metrics from a semantic bulleted paper-title list without a redundant section label; the popover is bounded to 360px while respecting the canvas edge.
 
 ## 6. Motion & Interaction
 
 Disclosure is an explicit click or keyboard action, never hover-driven. It has
 no height animation; this avoids accidental opening during graph exploration
-and respects reduced-motion preferences by default. Clicking only the blank SVG
-canvas clears a highlight; node and legend actions do not bubble into that
-gesture. Native focus indication and text-decoration feedback communicate
-button affordance. Dragging a graph node retains its dropped position for the
+and respects reduced-motion preferences by default. Selecting an author emits
+one short BFS wave: a node-colour solid flash briefly marks that author's
+BFS-tree edges in hop order, and a small ring acknowledges each reached node.
+Only one or two hop bands overlap, so the wave remains a frontier rather than
+a routing overlay. The wave ends after propagation rather than looping, because
+coauthorship is undirected and a continuous flow would imply a false direction. Reduced-motion
+preferences suppress the wave while preserving the final selected state.
+Clicking only the blank SVG canvas clears a highlight; node and legend actions
+do not bubble into that gesture. Native focus indication and text-decoration
+feedback communicate button affordance. Dragging a graph node retains its dropped position for the
 current graph session, so manual spatial exploration is never undone by the
 force simulation. Each institution has an invisible hub: its authors are drawn
 toward that hub, while only the hubs repel one another and are softly held within

@@ -31,6 +31,11 @@
     #eccv-coauthor-network .network-viewport { border-radius: var(--radius, .75rem) var(--radius, .75rem) 0 0; min-height: 0; min-width: 0; overflow: hidden; }
     #eccv-coauthor-network svg { background: var(--network-background); display: block; height: 100%; touch-action: none; width: 100%; }
     #eccv-coauthor-network .edge { stroke: var(--network-muted); stroke-linecap: round; }
+    #eccv-coauthor-network .selection-pulse-edge { animation: selection-edge-pulse 280ms ease-out var(--selection-pulse-delay, 0ms) 1 both; pointer-events: none; stroke: var(--selection-pulse-color); stroke-linecap: round; stroke-width: 2.2px; }
+    #eccv-coauthor-network .selection-pulse-node { animation: selection-node-pulse 300ms ease-out var(--selection-pulse-delay, 0ms) 1 both; fill: none; pointer-events: none; stroke: var(--selection-pulse-color); }
+    @keyframes selection-edge-pulse { 0% { opacity: 0; stroke-width: .5px; } 40% { opacity: .9; stroke-width: 2.8px; } 100% { opacity: 0; stroke-width: .5px; } }
+    @keyframes selection-node-pulse { 0% { opacity: 0; stroke-width: .4px; } 35% { opacity: .9; stroke-width: 2.7px; } 100% { opacity: 0; stroke-width: .4px; } }
+    @media (prefers-reduced-motion: reduce) { #eccv-coauthor-network .selection-pulse-edge, #eccv-coauthor-network .selection-pulse-node { animation: none; display: none; } }
     #eccv-coauthor-network .node { stroke: var(--network-background); stroke-width: 1.25px; cursor: grab; }
     #eccv-coauthor-network .node:active { cursor: grabbing; }
     #eccv-coauthor-network .label { fill: var(--network-foreground); font-size: 10px; paint-order: stroke; stroke: var(--network-background); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
@@ -202,11 +207,17 @@
     const paperRadius = d3.scaleSqrt().domain([1, d3.max(nodes, (d) => d.papers)]).range([3, 18]);
     const collaborationRadius = d3.scaleSqrt().domain([0, d3.max(nodes, (d) => d.weightedDegree)]).range([0, 7]);
     const radius = (d) => Math.min(28, paperRadius(d.papers) + collaborationRadius(d.weightedDegree));
-    const neighbours = new Map(nodes.map((d) => [d.id, new Set([d.id])]));
-    links.forEach((d) => { neighbours.get(d.source).add(d.target); neighbours.get(d.target).add(d.source); });
+    const neighbourEdges = new Map(nodes.map((d) => [d.id, []]));
+    links.forEach((d) => {
+      neighbourEdges.get(d.source).push({ edge: d, nodeId: d.target });
+      neighbourEdges.get(d.target).push({ edge: d, nodeId: d.source });
+    });
     const scene = svg.append('g').attr('class', 'network-scene');
     const link = scene.append('g').attr('aria-hidden', 'true').selectAll('line').data(links).join('line')
       .attr('class', 'edge').attr('stroke-width', (d) => 0.42 + Math.min(1.7, d.weight * .45)).attr('stroke-opacity', .18);
+    const selectionPulseLayer = scene.append('g').attr('aria-hidden', 'true').attr('class', 'selection-pulse-layer');
+    const selectionPulseEdges = selectionPulseLayer.append('g').attr('class', 'selection-pulse-edges');
+    const selectionPulseNodes = selectionPulseLayer.append('g').attr('class', 'selection-pulse-nodes');
     const labelNodes = [...nodes].sort((a, b) => b.weightedDegree - a.weightedDegree || b.papers - a.papers || b.degree - a.degree).slice(0, 18);
     const node = scene.append('g').selectAll('circle').data(nodes).join('circle')
       .attr('class', 'node').attr('r', radius)
@@ -228,18 +239,47 @@
       selectedMarker.select('.selected-node-label').attr('x', selectedRadius + 11).attr('y', -selectedRadius - 6).text('Selected · ' + selectedNode.name);
     };
     const linkHasInstitution = (edge, institution) => edge.source.institution === institution || edge.target.institution === institution;
-    const connectedComponentIds = (startId) => {
-      const visited = new Set();
+    const connectedComponentTraversal = (startId) => {
+      const distances = new Map([[startId, 0]]);
+      const treeEdges = [];
       const pending = [startId];
       while (pending.length) {
-        const currentId = pending.pop();
-        if (visited.has(currentId)) continue;
-        visited.add(currentId);
-        for (const neighbourId of neighbours.get(currentId) ?? []) {
-          if (!visited.has(neighbourId)) pending.push(neighbourId);
+        const currentId = pending.shift();
+        const currentDistance = distances.get(currentId);
+        for (const { edge, nodeId } of neighbourEdges.get(currentId) ?? []) {
+          if (distances.has(nodeId)) continue;
+          const distance = currentDistance + 1;
+          distances.set(nodeId, distance);
+          treeEdges.push({ distance, edge, sourceId: currentId, targetId: nodeId });
+          pending.push(nodeId);
         }
       }
-      return visited;
+      return { distances, treeEdges };
+    };
+    const connectedComponentIds = (startId) => new Set(connectedComponentTraversal(startId).distances.keys());
+    const clearSelectionPulse = () => {
+      selectionPulseEdges.selectAll('line').interrupt().remove();
+      selectionPulseNodes.selectAll('circle').interrupt().remove();
+    };
+    const startSelectionPulse = (startId) => {
+      clearSelectionPulse();
+      const selectedNode = nodeById.get(startId);
+      if (!selectedNode) return;
+      const { distances, treeEdges } = connectedComponentTraversal(startId);
+      const pulseColor = color(selectedNode.institution);
+      selectionPulseEdges.selectAll('line')
+        .data(treeEdges, (d) => d.sourceId + '→' + d.targetId)
+        .join('line')
+        .attr('class', 'selection-pulse-edge')
+        .style('--selection-pulse-color', pulseColor)
+        .style('--selection-pulse-delay', (d) => (d.distance * 180) + 'ms');
+      selectionPulseNodes.selectAll('circle')
+        .data([...distances.entries()].filter(([id]) => id !== startId), ([id]) => id)
+        .join('circle')
+        .attr('class', 'selection-pulse-node')
+        .attr('r', ([id]) => radius(nodeById.get(id)) + 4)
+        .style('--selection-pulse-color', pulseColor)
+        .style('--selection-pulse-delay', ([, distance]) => (distance * 180) + 'ms');
     };
     const applyInstitutionEmphasis = (hoveredId = null) => {
       if (selectedNodeId !== null) {
@@ -283,6 +323,7 @@
         .attr('aria-pressed', (d) => String(selectedInstitution === d.name))
         .attr('aria-label', (d) => d.name + ', ' + d.papers + ' selected papers')
         .on('click', (event, d) => {
+          clearSelectionPulse();
           selectedInstitution = selectedInstitution === d.name ? null : d.name;
           selectedNodeId = null;
           pinnedId = null;
@@ -326,6 +367,8 @@
       .force('y', d3.forceY((d) => d.isInstitutionHub ? height / 2 + d.homeY * height : height / 2).strength((d) => d.isInstitutionHub ? .065 : 0));
     const renderLayout = () => {
       link.attr('x1', (d) => d.source.x).attr('y1', (d) => d.source.y).attr('x2', (d) => d.target.x).attr('y2', (d) => d.target.y);
+      selectionPulseEdges.selectAll('line').attr('x1', (d) => d.edge.source.x).attr('y1', (d) => d.edge.source.y).attr('x2', (d) => d.edge.target.x).attr('y2', (d) => d.edge.target.y);
+      selectionPulseNodes.selectAll('circle').attr('cx', ([id]) => nodeById.get(id).x).attr('cy', ([id]) => nodeById.get(id).y);
       node.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
       labels.attr('x', (d) => d.x + 7).attr('y', (d) => d.y - 7);
       updateSelectedMarker();
@@ -341,6 +384,7 @@
     simulation.alpha(1).restart();
     let pinnedId = null;
     const clearHighlight = () => {
+      clearSelectionPulse();
       selectedInstitution = null;
       selectedNodeId = null;
       pinnedId = null;
@@ -379,6 +423,7 @@
     const hide = () => { applyInstitutionEmphasis(); tooltip.style('display', 'none'); };
     const toggleNodeSelection = (d) => {
       if (selectedNodeId === d.id) {
+        clearSelectionPulse();
         selectedNodeId = null;
         pinnedId = null;
         renderLegend();
@@ -390,6 +435,7 @@
         pinnedId = d.id;
         renderLegend();
         hide();
+        startSelectionPulse(d.id);
         return true;
       }
     };
