@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "eccv-scholar-schema",
+  "title": "ECCV Scholar-only reaudit CSV row schema",
+  "$defs": {
+    "scholarUrl": {
+      "type": "string",
+      "pattern": "^https://scholar\\.google\\.com(?:/|$)"
+    },
+    "optionalScholarUrl": {
+      "anyOf": [
+        { "const": "" },
+        { "$ref": "#/$defs/scholarUrl" }
+      ]
+    },
+    "stringOrEmpty": {
+      "type": "string"
+    },
+    "count": {
+      "type": "string",
+      "pattern": "^[0-9]+$"
+    },
+    "contributionType": {
+      "enum": [
+        "first_listed_unmarked",
+        "explicit_equal_contribution_first",
+        "contribution_marker_unknown"
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "title": "Candidate row",
+      "type": "object",
+      "required": [
+        "candidate_identity_key", "eccv_first_author_name",
+        "eccv_first_author_affiliation_raw", "eccv_selected_paper_count",
+        "eccv_virtual_poster_ids", "eccv_titles", "source_policy",
+        "scholar_status", "scholar_profile_url", "scholar_search_url",
+        "scholar_identity_evidence_url", "unknown_reason",
+        "eligible_prior_work_count", "first_listed_unmarked_count",
+        "explicit_equal_contribution_first_count", "contribution_marker_unknown_count"
+      ],
+      "properties": {
+        "source_policy": { "const": "google_scholar_only" },
+        "scholar_status": { "enum": ["matched", "unknown"] },
+        "scholar_profile_url": { "$ref": "#/$defs/optionalScholarUrl" },
+        "scholar_search_url": { "$ref": "#/$defs/optionalScholarUrl" },
+        "scholar_identity_evidence_url": { "$ref": "#/$defs/optionalScholarUrl" },
+        "unknown_reason": { "type": "string" },
+        "eligible_prior_work_count": { "$ref": "#/$defs/stringOrEmpty" },
+        "first_listed_unmarked_count": { "$ref": "#/$defs/stringOrEmpty" },
+        "explicit_equal_contribution_first_count": { "$ref": "#/$defs/stringOrEmpty" },
+        "contribution_marker_unknown_count": { "$ref": "#/$defs/stringOrEmpty" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "scholar_status": { "const": "matched" } } },
+          "then": {
+            "properties": {
+              "scholar_profile_url": { "$ref": "#/$defs/scholarUrl" },
+              "unknown_reason": { "const": "" },
+              "eligible_prior_work_count": { "$ref": "#/$defs/count" },
+              "first_listed_unmarked_count": { "$ref": "#/$defs/count" },
+              "explicit_equal_contribution_first_count": { "$ref": "#/$defs/count" },
+              "contribution_marker_unknown_count": { "$ref": "#/$defs/count" }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "scholar_status": { "const": "unknown" } } },
+          "then": {
+            "properties": {
+              "scholar_profile_url": { "const": "" },
+              "scholar_search_url": { "$ref": "#/$defs/scholarUrl" },
+              "scholar_identity_evidence_url": { "const": "" },
+              "unknown_reason": { "minLength": 1 },
+              "eligible_prior_work_count": { "const": "" },
+              "first_listed_unmarked_count": { "const": "" },
+              "explicit_equal_contribution_first_count": { "const": "" },
+              "contribution_marker_unknown_count": { "const": "" }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Work/evidence row",
+      "type": "object",
+      "required": [
+        "candidate_identity_key", "work_id", "title", "venue",
+        "publication_date", "work_type", "author_position",
+        "contribution_marker_status", "contribution_type", "scholar_marker_text",
+        "scholar_work_url", "scholar_marker_url", "source_policy"
+      ],
+      "properties": {
+        "source_policy": { "const": "google_scholar_only" },
+        "venue": { "enum": ["CVPR", "ICCV", "ECCV", "NeurIPS", "ICLR", "ICML", "SIGGRAPH", "SIGGRAPH Asia", "IROS", "ICRA", "RA-L"] },
+        "work_type": { "enum": ["main_conference_full_paper", "journal_article"] },
+        "author_position": { "const": "first" },
+        "contribution_marker_status": { "enum": ["explicit_equal", "no_marker", "bare_glyph", "unavailable"] },
+        "contribution_type": { "$ref": "#/$defs/contributionType" },
+        "scholar_marker_text": { "type": "string" },
+        "publication_date": { "pattern": "^[0-9]{4}(?:-[0-9]{2}(?:-[0-9]{2})?)?(?:T.*)?$" },
+        "scholar_work_url": { "$ref": "#/$defs/scholarUrl" },
+        "scholar_marker_url": { "$ref": "#/$defs/optionalScholarUrl" }
+      }
+    }
+  ]
+}

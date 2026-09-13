@@ -1,5 +1,11 @@
 # Prior top-tier first-author audit
 
+> **Historical multi-source method.** This document does not govern the current
+> Google Scholar-only reaudit. For the current outputs and rules, use
+> `GOOGLE_SCHOLAR_FIRST_AUTHOR_METHOD.md`; do not combine this document's CV,
+> institutional-profile, ORCID, proceedings, or publisher evidence with the
+> Scholar-only CSVs.
+
 This audit extends the ECCV 2026 Korean-first-affiliation PoC. It is about
 prior publication records of the first-listed author, not nationality. The
 source population remains the 277 ECCV 2026 papers in

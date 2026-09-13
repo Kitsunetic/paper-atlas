@@ -1,0 +1,95 @@
+{
+  "baselineCandidates": [
+    {
+      "candidate_identity_key": "cai_demo_a",
+      "eccv_first_author_name": "Demo A",
+      "eccv_first_author_affiliation_raw": "KAIST",
+      "eccv_selected_paper_count": "1",
+      "eccv_virtual_poster_ids": "1001",
+      "eccv_titles": "ECCV Demo A"
+    },
+    {
+      "candidate_identity_key": "cai_demo_b",
+      "eccv_first_author_name": "Demo B",
+      "eccv_first_author_affiliation_raw": "POSTECH",
+      "eccv_selected_paper_count": "2",
+      "eccv_virtual_poster_ids": "1002;1003",
+      "eccv_titles": "ECCV Demo B;ECCV Demo C"
+    }
+  ],
+  "baselinePapers": [
+    { "virtual_poster_id": "1001" },
+    { "virtual_poster_id": "1002" },
+    { "virtual_poster_id": "1003" }
+  ],
+  "candidates": [
+    {
+      "candidate_identity_key": "cai_demo_a",
+      "eccv_first_author_name": "Demo A",
+      "eccv_first_author_affiliation_raw": "KAIST",
+      "eccv_selected_paper_count": "1",
+      "eccv_virtual_poster_ids": "1001",
+      "eccv_titles": "ECCV Demo A",
+      "source_policy": "google_scholar_only",
+      "scholar_status": "matched",
+      "scholar_profile_url": "https://scholar.google.com/citations?user=demoA",
+      "scholar_search_url": "",
+      "scholar_identity_evidence_url": "https://scholar.google.com/citations?user=demoA",
+      "unknown_reason": "",
+      "eligible_prior_work_count": "2",
+      "first_listed_unmarked_count": "1",
+      "explicit_equal_contribution_first_count": "1",
+      "contribution_marker_unknown_count": "0"
+    },
+    {
+      "candidate_identity_key": "cai_demo_b",
+      "eccv_first_author_name": "Demo B",
+      "eccv_first_author_affiliation_raw": "POSTECH",
+      "eccv_selected_paper_count": "2",
+      "eccv_virtual_poster_ids": "1002;1003",
+      "eccv_titles": "ECCV Demo B;ECCV Demo C",
+      "source_policy": "google_scholar_only",
+      "scholar_status": "unknown",
+      "scholar_profile_url": "",
+      "scholar_search_url": "https://scholar.google.com/scholar?q=Demo+B+POSTECH",
+      "scholar_identity_evidence_url": "",
+      "unknown_reason": "No matching Scholar profile or author record was found.",
+      "eligible_prior_work_count": "",
+      "first_listed_unmarked_count": "",
+      "explicit_equal_contribution_first_count": "",
+      "contribution_marker_unknown_count": ""
+    }
+  ],
+  "works": [
+    {
+      "candidate_identity_key": "cai_demo_a",
+      "work_id": "work-a-unmarked",
+      "title": "An Unmarked Paper",
+      "venue": "CVPR",
+      "publication_date": "2025-06",
+      "work_type": "main_conference_full_paper",
+      "author_position": "first",
+      "contribution_marker_status": "no_marker",
+      "scholar_marker_text": "",
+      "contribution_type": "first_listed_unmarked",
+      "scholar_work_url": "https://scholar.google.com/scholar?cluster=demo-unmarked",
+      "scholar_marker_url": "",
+      "source_policy": "google_scholar_only"
+    },
+    {
+      "candidate_identity_key": "cai_demo_a",
+      "work_id": "work-a-equal",
+      "title": "An Explicitly Equal Paper",
+      "venue": "RA-L",
+      "publication_date": "2026-03-05",
+      "work_type": "journal_article",
+      "author_position": "first",
+      "contribution_marker_status": "explicit_equal",
+      "scholar_marker_text": "contributed equally",
+      "contribution_type": "explicit_equal_contribution_first",
+      "scholar_work_url": "https://scholar.google.com/scholar?cluster=demo-equal",
+      "scholar_marker_url": "https://scholar.google.com/scholar?cluster=demo-equal",
+      "source_policy": "google_scholar_only"
+    }
+  ]
+}
