@@ -105,10 +105,12 @@ const auditRows = records
     const reviewComplete = review?.prior_work_review_completeness === 'complete';
     const exactCount = reviewComplete ? String(minimumConfirmedCount) : '';
     const firstPaper = minimumConfirmedCount > 0 ? 'no' : reviewComplete ? 'yes' : '';
-    const determination = minimumConfirmedCount > 0
-      ? 'confirmed_not_first'
-      : reviewComplete ? 'confirmed_first'
-      : review ? 'identity_resolved_prior_work_review_incomplete' : 'blocked_on_identity_review';
+    const determination = review?.identity_resolution_status === 'unresolved'
+      ? 'blocked_on_identity_review'
+      : minimumConfirmedCount > 0
+        ? 'confirmed_not_first'
+        : reviewComplete ? 'confirmed_first'
+        : review ? 'identity_resolved_prior_work_review_incomplete' : 'blocked_on_identity_review';
     return {
       paper_uid: record.paper_uid,
       virtual_poster_id: record.virtual_poster_id,
@@ -152,7 +154,9 @@ const queueRows = [...groups.entries()]
       preferred_identity_evidence_source: 'Official personal CV, institutional profile, ORCID, then official proceedings or publisher metadata',
       prior_work_cutoff: cutoff,
       verified_prior_work_row_count: String(verifiedEvidence.length),
-      review_status: review ? `identity_${review.identity_resolution_status}_prior_work_${review.prior_work_review_completeness}` : 'not_started',
+      review_status: review?.identity_resolution_status === 'unresolved'
+        ? 'identity_unresolved_prior_work_incomplete'
+        : review ? `identity_${review.identity_resolution_status}_prior_work_${review.prior_work_review_completeness}` : 'not_started',
       notes: review?.notes ?? '',
     };
   })
