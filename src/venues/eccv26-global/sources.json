@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "ecva-accepted-papers",
+      "url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+      "extension": ".html",
+      "purpose": "Official ECCV 2026 main-conference denominator"
+    },
+    {
+      "id": "ecva-virtual-program",
+      "url": "https://eccv.ecva.net/static/virtual/data/eccv-2026-orals-posters.json",
+      "extension": ".json",
+      "purpose": "Official event, author-order, and raw-affiliation metadata"
+    },
+    {
+      "id": "ror-v2-release-2026-08-25",
+      "url": "https://zenodo.org/api/records/22099990/files/v2.12-2026-08-25-ror-data.zip/content",
+      "extension": ".zip",
+      "purpose": "Pinned ROR v2.12 institution and country reference snapshot"
+    }
+  ]
+}

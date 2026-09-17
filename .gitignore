@@ -1,0 +1,3 @@
+# Reproducible local source snapshots and derived data are intentionally not
+# versioned. Collection code and policies remain tracked under src/.
+/data/

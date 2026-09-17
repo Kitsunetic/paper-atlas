@@ -69,7 +69,7 @@ marker/evidence field.
 ## CLI and build use
 
 ```bash
-node pocs/eccv26-korea/eccv_scholar_validator.mjs \
+node src/venues/eccv26-korea/eccv_scholar_validator.mjs \
   eccv_2026_scholar_candidates.csv \
   eccv_2026_scholar_work_evidence.csv \
   eccv_2026_first_author_identity_review_queue.csv \

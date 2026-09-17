@@ -1,4 +1,4 @@
-![ECCV 2026 Korea-affiliation coauthor network preview: default graph, author search, connected-component focus, and KAIST institution focus](pocs/eccv26-korea/assets/eccv26-korea-coauthor-network-preview.gif)
+![ECCV 2026 Korea-affiliation coauthor network preview: default graph, author search, connected-component focus, and KAIST institution focus](src/venues/eccv26-korea/assets/eccv26-korea-coauthor-network-preview.gif)
 
 
 # Paper Atlas
@@ -6,7 +6,7 @@
 Paper Atlas is a collection of reproducible conference-paper datasets and
 interactive maps of authors, institutions, and collaboration.
 
-The first proof of concept is [`pocs/eccv26-korea`](pocs/eccv26-korea/): an
+The first proof of concept is [`src/venues/eccv26-korea`](src/venues/eccv26-korea/): an
 ECCV 2026 main-paper view filtered by first authors with a Korean-affiliated
 institution. Its scope is intentionally a filter, not the project boundary.
 
@@ -22,3 +22,6 @@ coauthor-component focus, institution focus, pan, zoom, and node dragging.
 Each slice should retain its source snapshot, classification/audit outputs,
 generator, and rendered artifact so that its claims can be reviewed and
 regenerated independently.
+
+The reusable, snapshot-first collection and affiliation-normalization procedure
+is documented in [the Conference Dataset Playbook](src/docs/CONFERENCE_DATASET_PLAYBOOK.md).
