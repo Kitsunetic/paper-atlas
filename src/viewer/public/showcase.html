@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paper Atlas · Primitive showcase</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+  </head>
+  <body>
+    <main class="page-shell showcase" aria-labelledby="showcase-title">
+      <p class="eyebrow">Primitive showcase</p>
+      <h1 id="showcase-title">Atlas interface states</h1>
+      <section class="showcase-grid" aria-label="Controls and metric cards">
+        <article class="metric-card"><span class="metric-label">Papers</span><strong>2,834</strong><small>Verified ECCV 2026 record</small></article>
+        <article class="metric-card is-selected"><span class="metric-label">Countries</span><strong>60</strong><small>Selected-context treatment</small></article>
+        <div class="control-card"><label for="demo-select">Country scope</label><select id="demo-select"><option>All countries</option><option>South Korea</option></select></div>
+        <div class="segmented" role="group" aria-label="Counting mode"><button type="button" class="is-active">Full count</button><button type="button">Fractional</button></div>
+      </section>
+      <section class="panel"><div class="panel-heading"><div><p class="eyebrow">Ranking row</p><h2>Country coverage</h2></div></div><button type="button" class="ranking-row"><span class="rank">01</span><span class="ranking-name">South Korea</span><span class="bar-track"><span class="bar-fill" style="--bar-width: 72%"></span></span><strong>277</strong></button></section>
+      <section class="empty-state"><p class="eyebrow">Empty state</p><h2>Select a country or institution</h2><p>The detailed author graph is intentionally generated only for an explicit scope.</p></section>
+    </main>
+  </body>
+</html>

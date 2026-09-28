@@ -25,6 +25,21 @@ The parser report at `data/eccv26/parsed/ecva-program-poc-report.json` confirms
 the raw JSON shape, poster UID coverage, and raw first-author-affiliation
 coverage before normalization begins.
 
+## Global viewer payload
+
+After running the offline normalization baseline and author-context recovery,
+build the static global viewer payload without requesting any source again:
+
+```sh
+node src/viewer/scripts/build_eccv26_atlas.mjs
+python3 -m http.server 4173 --directory src/viewer/public
+```
+
+The viewer exposes canonical organization-country counts, not author
+nationality. Its full and fractional paper-count modes, query-state contract,
+and bounded author-graph policy are documented in
+[`src/viewer/README.md`](../../viewer/README.md).
+
 ## Offline normalization baseline
 
 After the snapshot exists, the following commands make no network requests.
