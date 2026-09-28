@@ -10,8 +10,11 @@ The first proof of concept is [`src/venues/eccv26-korea`](src/venues/eccv26-kore
 ECCV 2026 main-paper view filtered by first authors with a Korean-affiliated
 institution. Its scope is intentionally a filter, not the project boundary.
 
-The interactive map supports affiliation filters, author search, connected
-coauthor-component focus, institution focus, pan, zoom, and node dragging.
+Country author maps place every university, research institute, and company in
+the selected first-author country on the same graph. They support author
+search, connected coauthor-component focus, institution focus, pan, zoom, and
+node dragging; the former institution-type checkbox strip is intentionally not
+part of the interface.
 
 ## Planned slices
 
@@ -25,3 +28,8 @@ regenerated independently.
 
 The reusable, snapshot-first collection and affiliation-normalization procedure
 is documented in [the Conference Dataset Playbook](src/docs/CONFERENCE_DATASET_PLAYBOOK.md).
+
+The first cross-country web surface is [the Paper Atlas Viewer](src/viewer/):
+an ECCV 2026 global pilot with country and institution exploration, explicit
+full/fractional counting semantics, URL-restorable scope, and bounded local
+coauthor graphs.
