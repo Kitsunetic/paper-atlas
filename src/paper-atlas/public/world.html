@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Paper Atlas global institution collaboration network.">
+  <title>Paper Atlas global institution network</title>
+  <link rel="stylesheet" href="./assets/network.css">
+</head>
+<body>
+  <main id="paper-atlas-network" aria-labelledby="network-title">
+    <div class="network-heading">
+      <h1 id="network-title">ECCV 2026: global institution collaboration network</h1>
+      <div class="network-tools">
+        <label class="network-search">Find institution
+          <span class="network-author-picker">
+            <input type="search" aria-label="Find institution" aria-describedby="network-search-status" aria-autocomplete="list" aria-controls="network-author-results" aria-expanded="false" aria-haspopup="listbox" autocomplete="off" placeholder="e.g. Tsinghua University" role="combobox">
+            <ul class="network-author-results" id="network-author-results" role="listbox" aria-label="Institution matches" hidden></ul>
+          </span>
+        </label>
+      </div>
+    </div>
+    <section class="network-frame" aria-label="Global institution collaboration network workbench">
+      <div class="legend is-collapsed" id="network-legend" aria-label="Countries represented by visible institutions"></div>
+      <button class="legend-toggle" type="button" aria-controls="network-legend" aria-expanded="false"></button>
+      <div class="network-viewport">
+        <svg role="img" aria-label="Institution collaboration network for ECCV 2026 papers" aria-describedby="network-svg-description" viewBox="0 0 1180 720" preserveAspectRatio="xMidYMid meet">
+          <desc id="network-svg-description">Each circle is a canonical institution. A line indicates one or more papers with affiliations from both institutions. Colour encodes the institution's normalized country.</desc>
+        </svg>
+      </div>
+      <div class="tooltip" role="tooltip"></div>
+      <p class="network-status" role="status"></p>
+      <p class="network-status" id="network-search-status" aria-live="polite"></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script type="module" src="./assets/institution-network.js?version=korea-reference-shell-4"></script>
+</body>
+</html>

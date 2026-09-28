@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Paper Atlas network routes.">
+  <title>Paper Atlas</title>
+  <link rel="stylesheet" href="./assets/directory.css">
+</head>
+<body>
+  <main class="atlas-directory">
+    <header>
+      <p class="atlas-kicker">Paper Atlas</p>
+      <h1>ECCV 2026 collaboration networks</h1>
+      <p class="atlas-summary">Choose one focused network view. Country routes share the same author-network renderer and differ only in their ISO-coded data payload.</p>
+    </header>
+    <section aria-labelledby="country-networks-title">
+      <div class="section-heading">
+        <h2 id="country-networks-title">Country author networks</h2>
+        <p>First-author country · author nodes</p>
+      </div>
+      <div class="route-grid" id="country-directory" aria-live="polite">
+        <p class="directory-status">Loading published country routes…</p>
+      </div>
+    </section>
+    <section aria-labelledby="global-network-title">
+      <div class="section-heading">
+        <h2 id="global-network-title">Global institution network</h2>
+        <p>Institution nodes · country colour</p>
+      </div>
+      <div class="route-grid">
+        <a class="route-item route-item-global" href="./world.html">
+          <span class="route-code">GLOBAL</span>
+          <strong>Institution collaboration network</strong>
+          <span>Cross-institution ECCV 2026 collaborations</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./assets/country-directory.js?version=country-directory-2"></script>
+</body>
+</html>

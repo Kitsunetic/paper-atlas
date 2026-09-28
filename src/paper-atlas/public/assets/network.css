@@ -1,0 +1,95 @@
+:root { color-scheme: light dark; }
+body { margin: 0; }
+#paper-atlas-network {
+  --network-foreground: light-dark(#17191d, #f3f4f6);
+  --network-background: light-dark(#ffffff, #121212);
+  --network-muted: light-dark(#4b5563, #c2c7d0);
+  --network-border: light-dark(#d2d6dc, #363b43);
+  --network-card: light-dark(#ffffff, #17191d);
+  --network-popover: light-dark(#ffffff, #23262c);
+  --network-popover-foreground: light-dark(#17191d, #f3f4f6);
+  --network-first-author: light-dark(#00759e, #67e8f9);
+  --network-oral: light-dark(#4f46e5, #a5b4fc);
+  --network-spotlight: light-dark(#9a6700, #facc15);
+  --network-c1: light-dark(#d92d20, #ff6b61);
+  --network-c2: light-dark(#e66a00, #ff9f1c);
+  --network-c3: light-dark(#a86c00, #ffd166);
+  --network-c4: light-dark(#5f9400, #a3e635);
+  --network-c5: light-dark(#198754, #4ade80);
+  --network-c6: light-dark(#008c83, #2dd4bf);
+  --network-c7: light-dark(#007fc4, #38bdf8);
+  --network-c8: light-dark(#2563eb, #60a5fa);
+  --network-c9: light-dark(#5b4cc4, #818cf8);
+  --network-c10: light-dark(#8129a6, #c084fc);
+  --network-c11: light-dark(#c2185b, #f472b6);
+  --network-c12: light-dark(#8b5a2b, #d6a56f);
+  background: var(--network-background);
+  color: var(--network-foreground);
+  display: grid;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  grid-template-rows: auto minmax(0, 1fr);
+  height: 100dvh;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+#paper-atlas-network, #paper-atlas-network * { box-sizing: border-box; }
+#paper-atlas-network .network-heading { align-items: baseline; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; margin-bottom: .5rem; min-width: 0; }
+#paper-atlas-network h1 { color: var(--network-foreground); font-size: 1.1rem; letter-spacing: -.015em; margin: 0; min-width: 0; overflow-wrap: anywhere; }
+#paper-atlas-network .network-tools { align-items: center; display: flex; flex-wrap: wrap; gap: .5rem; min-width: 0; }
+#paper-atlas-network .network-search { align-items: center; display: inline-flex; font-size: .82rem; gap: .35rem; min-width: 0; }
+#paper-atlas-network .network-author-picker { min-width: 11rem; position: relative; }
+#paper-atlas-network .network-search input { background: var(--network-background); border: 1px solid var(--network-border); border-radius: .35rem; color: var(--network-foreground); font: inherit; padding: .3rem .45rem; width: 100%; }
+#paper-atlas-network .network-author-results { background: var(--network-card); border: 1px solid var(--network-border); border-radius: .5rem; box-shadow: 0 10px 30px color-mix(in srgb, var(--network-foreground) 12%, transparent); display: grid; gap: .1rem; left: 0; list-style: none; margin: .25rem 0 0; max-height: 14rem; min-width: max-content; overflow-y: auto; padding: .2rem; position: absolute; right: 0; top: 100%; z-index: 3; }
+#paper-atlas-network .network-author-results[hidden] { display: none; }
+#paper-atlas-network .network-author-result { align-items: start; background: transparent; border: 0; border-radius: .35rem; color: var(--network-foreground); cursor: pointer; display: grid; font: inherit; gap: .05rem; padding: .35rem .45rem; text-align: left; width: 100%; }
+#paper-atlas-network .network-author-result:hover, #paper-atlas-network .network-author-result:focus-visible, #paper-atlas-network .network-author-result.is-active { background: color-mix(in srgb, var(--network-foreground) 10%, transparent); outline: none; }
+#paper-atlas-network .network-author-result-institution, #paper-atlas-network .network-author-no-results { color: var(--network-muted); font-size: .76rem; }
+#paper-atlas-network .network-frame { background: var(--network-card); border: 1px solid var(--network-border); border-radius: .75rem; display: grid; grid-template-rows: auto auto minmax(0, 1fr); min-height: 0; min-width: 0; overflow: visible; position: relative; }
+#paper-atlas-network .network-viewport { border-radius: .75rem .75rem 0 0; min-height: 0; min-width: 0; overflow: hidden; }
+#paper-atlas-network svg { background: var(--network-background); display: block; height: 100%; touch-action: none; width: 100%; }
+#paper-atlas-network .edge { stroke: var(--network-muted); stroke-linecap: round; }
+#paper-atlas-network .node { cursor: grab; stroke: var(--network-background); stroke-width: 1.25px; }
+#paper-atlas-network .node:active { cursor: grabbing; }
+#paper-atlas-network .label { fill: var(--network-foreground); font-size: 10px; paint-order: stroke; pointer-events: none; stroke: var(--network-background); stroke-linejoin: round; stroke-width: 3px; }
+#paper-atlas-network .selected-node-label { fill: var(--network-foreground); font-size: .82rem; font-weight: 700; paint-order: stroke; pointer-events: none; stroke: var(--network-background); stroke-linejoin: round; stroke-width: 4px; }
+#paper-atlas-network .legend { align-content: start; display: grid; gap: .18rem .5rem; grid-auto-rows: 1.55rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); max-height: min(26dvh, 13rem); overflow: auto; overscroll-behavior: contain; padding: .35rem .8rem; }
+#paper-atlas-network .legend[hidden], #paper-atlas-network .legend-toggle[hidden] { display: none; }
+#paper-atlas-network .legend.is-collapsed { max-height: 3.28rem; overflow: hidden; }
+#paper-atlas-network .legend-item { align-items: center; background: transparent; border: 0; color: var(--network-muted); cursor: pointer; display: inline-flex; font: inherit; font-size: .73rem; gap: .3rem; min-width: 0; overflow: hidden; padding: .18rem .25rem; text-align: left; white-space: nowrap; }
+#paper-atlas-network .legend-item:hover, #paper-atlas-network .legend-item:focus-visible { color: var(--network-foreground); outline: none; text-decoration: underline; text-underline-offset: .18em; }
+#paper-atlas-network .legend-item.is-selected { background: color-mix(in srgb, var(--network-foreground) 10%, transparent); color: var(--network-foreground); font-weight: 600; }
+#paper-atlas-network .legend-item.is-muted { opacity: .48; }
+#paper-atlas-network .swatch { border-radius: 50%; display: inline-block; flex: 0 0 auto; height: .62rem; width: .62rem; }
+#paper-atlas-network .legend-name { overflow: hidden; text-overflow: ellipsis; }
+#paper-atlas-network .legend-toggle { align-self: start; background: transparent; border: 0; color: var(--network-muted); cursor: pointer; font: inherit; font-size: .76rem; margin: 0 .8rem .4rem; padding: .15rem .25rem; text-align: left; text-decoration: underline; text-underline-offset: .18em; }
+#paper-atlas-network .legend-toggle:hover, #paper-atlas-network .legend-toggle:focus-visible { color: var(--network-foreground); }
+#paper-atlas-network .tooltip { background: var(--network-popover); border: 1px solid var(--network-border); border-radius: .5rem; box-shadow: 0 10px 30px color-mix(in srgb, var(--network-foreground) 16%, transparent); color: var(--network-popover-foreground); display: none; font-size: .78rem; line-height: 1.4; max-width: min(360px, calc(100% - 16px)); padding: .55rem .65rem; pointer-events: none; position: absolute; z-index: 2; }
+#paper-atlas-network .tooltip strong { display: block; font-size: .83rem; margin-bottom: .15rem; }
+#paper-atlas-network .tooltip-divider { border-top: 1px solid color-mix(in srgb, var(--network-border) 82%, transparent); display: block; margin: .45rem 0 .4rem; }
+#paper-atlas-network .tooltip-papers { margin: 0; padding-left: 1.1rem; }
+#paper-atlas-network .tooltip-papers li + li { margin-top: .2rem; }
+#paper-atlas-network .tooltip-paper-title { display: block; }
+#paper-atlas-network .tooltip-paper-title.is-first-author { border-inline-start: 2px solid var(--network-first-author); color: var(--network-first-author); font-weight: 650; padding-inline-start: .35rem; }
+#paper-atlas-network .tooltip-paper-meta { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .18rem; }
+#paper-atlas-network .tooltip-paper-badge { border: 1px solid currentColor; border-radius: 999px; color: var(--network-muted); font-size: .66rem; font-weight: 650; letter-spacing: .01em; line-height: 1.15; padding: .08rem .28rem; }
+#paper-atlas-network .tooltip-paper-badge.is-first-author { background: color-mix(in srgb, var(--network-first-author) 13%, transparent); color: var(--network-first-author); }
+#paper-atlas-network .tooltip-paper-badge.is-oral { background: color-mix(in srgb, var(--network-oral) 13%, transparent); color: var(--network-oral); }
+#paper-atlas-network .tooltip-paper-badge.is-spotlight { background: color-mix(in srgb, var(--network-spotlight) 15%, transparent); color: var(--network-spotlight); }
+#paper-atlas-network .network-status { color: var(--network-muted); display: none; font-size: .82rem; line-height: 1.45; margin: 0; padding: .8rem; }
+#paper-atlas-network .selection-pulse-edge { animation: selection-edge-pulse 280ms ease-out var(--selection-pulse-delay, 0ms) 1 both; pointer-events: none; stroke: var(--selection-pulse-color); stroke-linecap: round; stroke-width: 2.2px; }
+#paper-atlas-network .selection-pulse-node { animation: selection-node-pulse 300ms ease-out var(--selection-pulse-delay, 0ms) 1 both; fill: none; pointer-events: none; stroke: var(--selection-pulse-color); }
+@keyframes selection-edge-pulse { 0% { opacity: 0; stroke-width: .5px; } 40% { opacity: .9; stroke-width: 2.8px; } 100% { opacity: 0; stroke-width: .5px; } }
+@keyframes selection-node-pulse { 0% { opacity: 0; stroke-width: .4px; } 35% { opacity: .9; stroke-width: 2.7px; } 100% { opacity: 0; stroke-width: .4px; } }
+@media (prefers-reduced-motion: reduce) { #paper-atlas-network .selection-pulse-edge, #paper-atlas-network .selection-pulse-node { animation: none; display: none; } }
+@media (max-width: 640px) {
+  #paper-atlas-network { max-width: 100vw; width: 100vw; }
+  #paper-atlas-network .network-heading, #paper-atlas-network .network-frame, #paper-atlas-network .network-viewport, #paper-atlas-network svg { max-width: 100vw; min-width: 0; width: 100vw; }
+  #paper-atlas-network .network-heading { align-items: stretch; display: grid; gap: .45rem; grid-template-columns: minmax(0, 1fr); }
+  #paper-atlas-network h1 { font-size: clamp(.92rem, 4.2vw, 1.05rem); width: 100%; }
+  #paper-atlas-network .network-tools { align-items: stretch; display: grid; gap: .45rem; grid-template-columns: minmax(0, 1fr); width: 100%; }
+  #paper-atlas-network .network-search { display: grid; grid-template-columns: auto minmax(0, 1fr); width: 100%; }
+  #paper-atlas-network .network-author-picker { min-width: 0; }
+  #paper-atlas-network .legend { grid-template-columns: minmax(0, 1fr); max-height: 11rem; }
+}

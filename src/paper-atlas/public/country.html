@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Paper Atlas coauthor network by first-author country.">
+  <title>Paper Atlas country network</title>
+  <link rel="stylesheet" href="./assets/network.css">
+</head>
+<body>
+  <main id="paper-atlas-network" aria-labelledby="network-title">
+    <div class="network-heading">
+      <h1 id="network-title">ECCV 2026: Korea paper coauthor network</h1>
+      <div class="network-tools">
+        <label class="network-search"><span class="network-search-label">Find author</span>
+          <span class="network-author-picker">
+            <input type="search" aria-label="Find author" aria-describedby="network-search-status" aria-autocomplete="list" aria-controls="network-author-results" aria-expanded="false" aria-haspopup="listbox" autocomplete="off" placeholder="e.g. Kyungdon Joo" role="combobox">
+            <ul class="network-author-results" id="network-author-results" role="listbox" aria-label="Author matches" hidden></ul>
+          </span>
+        </label>
+      </div>
+    </div>
+    <section class="network-frame" aria-label="Coauthor network workbench">
+      <div class="legend is-collapsed" id="network-legend" aria-label="Visible normalized institutions"></div>
+      <button class="legend-toggle" type="button" aria-controls="network-legend" aria-expanded="false"></button>
+      <div class="network-viewport">
+        <svg role="img" aria-label="Coauthor network for selected ECCV 2026 papers" aria-describedby="network-svg-description" viewBox="0 0 1180 720" preserveAspectRatio="xMidYMid meet">
+          <desc id="network-svg-description">Each circle is an author. A line indicates coauthorship. Authors sharing a normalized institution are softly grouped while collaborations remain visible.</desc>
+        </svg>
+      </div>
+      <div class="tooltip" role="tooltip"></div>
+      <p class="network-status" role="status"></p>
+      <p class="network-status" id="network-search-status" aria-live="polite"></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script type="module" src="./assets/country-page.js?version=country-route-10"></script>
+</body>
+</html>
